@@ -1,0 +1,507 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.App-logo {
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.LogoText {
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+  color: brown;
+}
+
+.addressButton{
+  cursor: pointer;
+  
+}
+
+.addressButton:hover{
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+
+.arrow {
+  transition: all 0.3s ease;
+}
+.arrow.active {
+  transform: rotateZ(-180deg);
+}
+
+.arrowCloth {
+  transition: all 0.3s ease;
+}
+.arrowCloth.active {
+  transform: rotateZ(90deg);
+}
+
+#navlink {
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+#navlinkPhone {
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+#mojaSzafaWindow {
+  position: "relative";
+  max-height: 500px;
+  z-index: 9999;
+}
+
+#mojaSzafaWindow.active {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+#mojaSzafaWindowPhone {
+  position: "relative";
+  max-height: 300px;
+  overflow: auto;
+  transition: max-height 0.2s ease-in-out;
+
+  z-index: 9999;
+}
+
+#mojaSzafaWindowPhone.active {
+  max-height: 0px;
+  overflow: hidden;
+}
+#CustomButton:hover div {
+  background-color: #9af9dc;
+}
+
+#CustomButton.active div {
+  background-color: #00ffb1;
+}
+
+.clothButton{
+  height: 100%;
+  background-color: #9af9dc;
+}
+
+.noPointer div{
+  cursor: initial;
+  color: black;
+}
+
+.photoWindow div{
+  cursor: initial;
+  color: black;
+}
+
+.photoWindow:hover div{
+  cursor: pointer;
+  color: #00ffb1;
+}
+
+
+#login {
+  background-color: white;
+  font-weight: bold;
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+#login svg {
+  margin-bottom: 4px;
+  fill: #cccccc;
+  stroke: #cccccc;
+  width: 30px;
+}
+
+button[id="login"] {
+  border-color: #eeeeee;
+}
+
+#login.active {
+  background-color: #9af9dc;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+
+#login.active svg {
+  margin-bottom: 4px;
+  fill: black;
+  stroke: black;
+  width: 30px;
+}
+
+.ClothStatus{
+  margin-bottom: 30px;
+  font-size: 22px;
+  padding: 10px;
+}
+
+button.active[id="login"] {
+  border-color: #333;
+}
+
+#login.active:hover {
+  background-color: #00ffb1;
+  font-weight: bold;
+}
+
+#address div {
+  background-color: #959595;
+  color: white;
+}
+
+#address.active div {
+  background-color: #959595;
+}
+
+#address:hover div {
+  background-color: #7b7a7a;
+}
+
+#address.active:hover div {
+  background-color: #7b7a7a;
+}
+
+
+input[type="custom"] {
+  display: none;
+  pointer-events: none;
+}
+
+input[type="custom"] + label {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 3fr;
+}
+input[type="custom"] + label svg {
+  stroke-width: 5;
+
+  width: 30px;
+  margin-right: 10px;
+}
+input[type="custom"] + label span {
+  margin-top: 3px;
+}
+
+input[type="custom"] + label svg .box {
+  stroke: #00ffb1;
+  stroke-dasharray: 3200;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+input[type="custom"] + label svg .check {
+  stroke: black;
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+input[type="custom"].active + label svg .box {
+  stroke-dashoffset: 3200;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+input[type="custom"].active + label svg .check {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+input[type="custom"]:hover + label svg .box {
+  stroke: #9af9dc;
+}
+
+input[type="custom"]:hover + label svg .check {
+  stroke: black;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.tag:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.tag:focus {
+  outline: none;
+}
+
+.tag.active {
+  background-color: #00ffb1;
+}
+
+.tag {
+  background-color: #ffffff;
+}
+
+.tagSub:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.tagSub:focus {
+  outline: none;
+}
+
+.tagSub.active {
+  background-color: lightgreen;
+}
+
+.tagSub {
+  background-color: whitesmoke;
+}
+
+
+.tagAdd:hover {
+  color: white;
+  background-color: lightcyan;
+  cursor: pointer;
+}
+
+.tagAdd:focus {
+  outline: none;
+}
+
+.tagAdd.active {
+  color: white;
+  background-color: lightcyan;
+}
+
+.tagAdd {
+  color: white;
+  background-color: lightcyan;
+}
+
+
+.main {
+  
+  margin: auto;
+}
+
+/* ---------- BANNER ---------- */
+
+
+
+.banner-content {
+  /* border: dotted; */
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%),
+}
+
+.banner-text {
+  z-index: -7;
+  color: white;
+  font-size: 64px;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 2px 2px #000;
+
+}
+
+.banner-text-phone {
+  z-index: -7;
+  color: white;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 1px 1px #000;
+
+}
+
+.banner-button {
+  z-index: -1;
+  padding: 10px;
+  margin-top: 16px;
+  background-color: #00ffb1;
+  border: none;
+  width: 128px;
+  font-size: 17px;
+}
+
+/*seconNavbar*/
+.scrolled{
+  
+  position: fixed;
+  top: 0;
+ width: 100%;
+  background-color: #f8f9fa;
+  animation: moveDown 0.2s ease-in-out;
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-2rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}
+
+
+/* ---------- PRODUCTS ---------- */
+
+.clothContainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        
+        display:grid;
+        justify-content: space-around;
+        margin: auto;
+
+
+}
+
+@media (min-width: 576px) {  
+ .clothContainer{
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5em;
+ }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .clothContainer{
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
+   }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .clothContainer{
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
+   }
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  .clothContainer{
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.7em;
+   }
+}
+
+@media (min-width: 1600px) {  
+  .clothContainer{
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.7em;
+   }
+}
+/* ---------- PRODUCT ---------- */
+
+
+
+
+.produkt-container {
+  height: 500px;
+  /* border: dotted; */
+  margin-top: 32px;
+}
+
+.container-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  border: dotted;
+  border-color: #d1d1d1;
+  border-style: solid;
+  border-width: 0.2px;
+  overflow: hidden;
+}
+
+.produkt-container.tekst {
+  font-size: 30px;
+}
+
+.product-image-portrait {
+  object-fit: cover;
+
+  max-height: 99.9%;
+}
+
+.product-image-landscape {
+  object-fit: cover;
+  max-width: 99.9%;
+}
+
+.detail-attribute-name {
+  background-color: #9af9dc;
+  padding: 1px 4px 1px 4px;
+}
+
+.heart-icon:hover {
+  cursor: pointer;
+  background-color: pink;
+}
+
+.heart-icon.active {
+  background-color: red;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footerLink:hover {
+  cursor: pointer;
+  color: #555;
+  fill: #555;
+}
+
+.cloth:hover{
+  cursor: pointer;
+  
+}
+
+.clothtag{
+  background-color: #9af9dc;
+  padding: 7px;
+  margin-right: 7px;
+  padding-right: 4px;
+}
